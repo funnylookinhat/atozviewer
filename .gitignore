@@ -1,0 +1,6 @@
+composer.phar
+vendor
+cache
+api.json
+templating/bower_components
+templating/node_modules

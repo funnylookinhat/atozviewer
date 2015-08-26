@@ -1,0 +1,34 @@
+{% extends "layout/main.html.twig" %}
+
+{% block content %}
+  <h1>
+    {{ object.name }}
+  </h1>
+
+  <h4>
+    {{ object.ref_formatted }}
+  </h4>
+
+  <p>
+    {# TODO - Parse description to link to other actions / objects #}
+    {{ object.description }}
+  </p>
+
+  {% if object.notes|length > 0 %}
+    <h4>Notes</h4>
+    <ul>
+      {% for note in object.notes %}
+        <li>{{ note }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <h4>Properties:</h4>
+  {% if object.properties|length > 0 %}
+    <ul>
+      {% for keyvalue in object.properties %}
+        {% include "partial/keyvalue.html.twig" %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

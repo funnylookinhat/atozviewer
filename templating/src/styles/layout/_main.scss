@@ -1,0 +1,24 @@
+.side-nav {
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		margin: 0;
+	}
+
+	// Tree is the root-level element, but it can have nested <ul> with <li>
+	ul.tree {
+		li a:not(.button) {
+			padding: 0;
+		}
+
+		margin-left: 0;
+
+		ul {
+			margin-left: 0.75rem;
+		}
+	}
+
+}

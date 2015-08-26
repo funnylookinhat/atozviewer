@@ -1,0 +1,33 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ATOZ API Viewer</title>
+    <meta name="description" content="ATOZ API Viewer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/styles/app.css">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    {% include "layout/header.html.twig" %}
+
+    <div class="main row">
+      <div class="columns large-2">
+        {% include "layout/sidebar.html.twig" %}
+      </div>
+
+      <div class="columns large-10">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+
+    {% include "layout/footer.html.twig" %}
+
+    <script src="/scripts/app.js"></script>
+  </body>
+</html>

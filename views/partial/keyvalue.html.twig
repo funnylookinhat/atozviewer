@@ -1,0 +1,12 @@
+<li class="keyvalue">
+	<span class="name {{keyvalue.flag }}">{{ keyvalue.name }}</span>
+	<span class="description">{{ keyvalue.description }}</span>
+	<span class="type">{{ keyvalue.type }}{% if keyvalue.limit >= 0 %}({{ keyvalue.limit }}){% endif %}</span>
+	{% if keyvalue.children|length > 0 %}
+		<ul>
+			{% for keyvalue in keyvalue.children %}
+				{% include "partial/keyvalue.html.twig" %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+</li>

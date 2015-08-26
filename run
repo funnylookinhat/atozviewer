@@ -1,0 +1,3 @@
+#!/bin/bash
+
+(cd www; php -S 0.0.0.0:4321 routing.php)

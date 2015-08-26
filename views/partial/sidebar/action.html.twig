@@ -1,0 +1,14 @@
+<li>
+	{% if action.class|length > 0 %}
+		<a href="/action/{{ action.class }}">{{ action.name }}</a>
+	{% else %}
+		{{ action.name }}
+	{% endif %}
+	{% if action.tree|length > 0 %}
+		<ul>
+			{% for action in action.tree %}
+				{%include "partial/sidebar/action.html.twig" %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+</li>

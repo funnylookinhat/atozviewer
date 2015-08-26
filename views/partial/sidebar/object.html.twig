@@ -1,0 +1,14 @@
+<li>
+	{% if object.class|length > 0 %}
+		<a href="/object/{{ object.class }}">{{ object.name }}</a>
+	{% else %}
+		{{ object.name }}
+	{% endif %}
+	{% if object.tree|length > 0 %}
+		<ul>
+			{% for object in object.tree %}
+				{%include "partial/sidebar/object.html.twig" %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+</li>

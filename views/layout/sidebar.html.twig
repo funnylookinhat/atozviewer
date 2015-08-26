@@ -1,0 +1,17 @@
+<div class="side-nav">
+  <p>Actions</p>
+
+  <ul class="tree">
+  	{% for action in actions_tree %}
+  		{% include "partial/sidebar/action.html.twig" %}
+  	{% endfor %}
+  </ul>
+
+  <p>Objects</p>
+
+  <ul class="tree">
+  	{% for object in objects_tree %}
+  		{% include "partial/sidebar/object.html.twig" %}
+  	{% endfor %}
+  </ul>
+</div>
