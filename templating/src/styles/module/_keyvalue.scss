@@ -1,0 +1,65 @@
+.keyvalues {
+	list-style-type: none;
+
+	ul {
+		list-style-type: none;
+		margin-left: rem-calc(25);
+	}
+}
+
+.keyvalue {
+	/* This is a cheap way to clear: both; */
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 0;
+
+	.name {
+		float: left;
+		font-size: rem-calc(14);
+		padding: 0.25rem;
+		position: relative;
+		text-align: left;
+		background: #efefef;
+		z-index: 100;
+		min-width: rem-calc(125);
+		margin-bottom: 0;
+
+		.type {
+			display: block;
+			font-size: 0.75rem;
+			font-weight: normal;
+			text-transform: none;
+			text-decoration: none;
+		}
+	}
+
+	.description {
+		position: relative;
+		top: 0.15rem;
+		padding: 0.25rem;
+		border: 1px solid #efefef;
+		text-align: left;
+		font-size: rem-calc(14);
+		line-height: 1.25rem;
+		padding-top: 0.2rem;
+		overflow: auto;
+		margin-bottom: 0;
+	}
+
+	.description:after {
+		content: " ";
+		float: right;
+	}
+
+	/*
+	ul:before {
+		content: "\f0da";
+		font-family: FontAwesome;
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: rem-calc(14);
+		color: #ccc;
+	}
+	*/
+}

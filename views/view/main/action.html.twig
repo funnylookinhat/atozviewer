@@ -11,14 +11,14 @@
 
 	<p>
 		{# TODO - Parse description to link to other actions / objects #}
-		{{ action.description }}
+		{{ action.description|parseLinks }}
 	</p>
 
 	{% if action.notes|length > 0 %}
 		<h4>Notes</h4>
 		<ul>
 			{% for note in action.notes %}
-				<li>{{ note }}</li>
+				<li>{{ note|parseLinks | raw  }}</li>
 			{% endfor %}
 		</ul>
 	{% endif %}

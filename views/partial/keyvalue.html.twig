@@ -1,12 +1,25 @@
-<li class="keyvalue">
-	<span class="name {{keyvalue.flag }}">{{ keyvalue.name }}</span>
-	<span class="description">{{ keyvalue.description }}</span>
-	<span class="type">{{ keyvalue.type }}{% if keyvalue.limit >= 0 %}({{ keyvalue.limit }}){% endif %}</span>
-	{% if keyvalue.children|length > 0 %}
+<li class="keyvalue" data-equalizer>
+	<h5 class="name {{ keyvalue.flag }}" data-equalizer-watch>
+		{{ keyvalue.name }}
+		<span class="type">
+			{{ keyvalue.type }}
+			{% if keyvalue.limit > 0 %}
+				[{{ keyvalue.limit }}]
+			{% endif %}
+		</span>
+	</h5>
+
+	<p class="description" data-equalizer-watch>
+		{{ keyvalue.description|parseLinks | raw }}&nbsp;
+	</p>
+</li>
+
+{% if keyvalue.children|length > 0 %}
+	<li class="keyvalue">
 		<ul>
 			{% for keyvalue in keyvalue.children %}
 				{% include "partial/keyvalue.html.twig" %}
 			{% endfor %}
 		</ul>
-	{% endif %}
-</li>
+	</li>
+{% endif %}

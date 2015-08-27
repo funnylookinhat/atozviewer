@@ -18,7 +18,7 @@ var paths = {
         ],
         fonts: [
             'src/fonts/**/*',
-            'src/bower_components/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2,otf}'
+            'bower_components/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2,otf}'
         ]
     },
     build: {
