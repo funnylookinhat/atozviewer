@@ -24,6 +24,10 @@
 		min-width: rem-calc(125);
 		margin-bottom: 0;
 
+		&.required {
+			color: $alert-color;
+		}
+
 		.type {
 			display: block;
 			font-size: 0.75rem;
