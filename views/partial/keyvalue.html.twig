@@ -17,7 +17,7 @@
 {% if keyvalue.children|length > 0 %}
 	<li class="keyvalue">
 		<ul>
-			{% for keyvalue in keyvalue.children %}
+			{% for keyvalue in keyvalue.children|sort('keyValueSort') %}
 				{% include "partial/keyvalue.html.twig" %}
 			{% endfor %}
 		</ul>

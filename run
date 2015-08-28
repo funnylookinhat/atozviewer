@@ -1,5 +1,8 @@
 #!/bin/bash
 
-printf "\nRunning at http://localhost:4321/ \n\n";
+printf "\nRunning at http://localhost:54321/ \n\n";
 
-(cd www; php -S 0.0.0.0:4321 routing.php >> /dev/null)
+(cd www; php -S 0.0.0.0:54321 routing.php >> /dev/null)
+
+
+# FOO=BAR php -d variables_order=EGPCS -S localhost:9090 /tmp/test.php
