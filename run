@@ -1,8 +1,10 @@
 #!/bin/bash
 
-printf "\nRunning at http://localhost:54321/ \n\n";
+if [ -z "$PORT" ]; then 
+	PORT=54321
+fi
 
-(cd www; php -S 0.0.0.0:54321 routing.php >> /dev/null)
+printf "\nRunning at http://localhost:$PORT/ \n\n";
 
-
-# FOO=BAR php -d variables_order=EGPCS -S localhost:9090 /tmp/test.php
+cd www
+php -d variables_order=EGPCS -S 0.0.0.0:$PORT routing.php >> /dev/null

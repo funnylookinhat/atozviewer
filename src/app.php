@@ -13,23 +13,21 @@ $object_prefix = $ref_separator.'Object';
 $action_prefix = $ref_separator.'Action';
 
 // Can be set with $_ENV
-if( isset($_ENV['api_location']) ) {
-    $api_location = $_ENV['api_location'];
+if( isset($_ENV['API_PATH']) ) {
+    $api_location = $_ENV['API_PATH'];
 }
 
-if( isset($_ENV['ref_separator']) ) {
-    $ref_separator = $_ENV['ref_separator'];
+if( isset($_ENV['REF_SEPARATOR']) ) {
+    $ref_separator = $_ENV['REF_SEPARATOR'];
 }
 
-if( isset($_ENV['object_prefix']) ) {
-    $object_prefix = $_ENV['object_prefix'];
+if( isset($_ENV['OBJECT_PREFIX']) ) {
+    $object_prefix = $_ENV['OBJECT_PREFIX'];
 }
 
-if( isset($_ENV['action_prefix']) ) {
-    $action_prefix = $_ENV['action_prefix'];
+if( isset($_ENV['ACTION_PREFIX']) ) {
+    $action_prefix = $_ENV['ACTION_PREFIX'];
 }
-
-
 
 $app = new Application();
 
