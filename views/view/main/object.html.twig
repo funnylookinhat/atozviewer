@@ -25,10 +25,12 @@
 
   <h4>Properties:</h4>
   {% if object.properties|length > 0 %}
-    <ul>
-      {% for keyvalue in object.properties %}
-        {% include "partial/keyvalue.html.twig" %}
-      {% endfor %}
-    </ul>
+    <div class="keyvalue">
+      <ul class="keyvalues">
+        {% for keyvalue in object.properties %}
+          {% include "partial/keyvalue.html.twig" %}
+        {% endfor %}
+      </ul>
+    </div>
   {% endif %}
 {% endblock %}
